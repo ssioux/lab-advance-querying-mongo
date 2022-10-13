@@ -40,7 +40,11 @@ limit:
 
 ### 5. All the companies that have less than 1000 employees and have been founded before 2005. Order them by the number of employees and limit the search to 10 companies.
 
-<!-- Your Code Goes Here -->
+query:  {number_of_employees: {$lte: 1000}, founded_year: {$lte: 2005}}
+projection: 
+sort:   {number_of_employees: 1}
+skip: 
+limit:
 
 ### 6. All the companies that don't include the `partners` field.
 
