@@ -42,7 +42,7 @@ limit:
 
 query:  {number_of_employees: {$lte: 1000}, founded_year: {$lte: 2005}}
 projection: 
-sort:   {number_of_employees: 1}
+sort:   {number_of_emplo 5"yees: 1}
 skip: 
 limit:
 
