@@ -32,8 +32,8 @@ limit:
 
 ### 4. All the companies that had a Valuation Amount of more than 100.000.000 and have been founded before 2010. Retrieve only the `name` and `ipo` fields.
 <!-- POR AQUI VAMOS hay que corregir-->
-query: {ipo: {$gte: 100000000}, founded_year: {$lte: 2010}}
-projection: 
+query: {"ipo.valuation_amount": {$gte: 100000000}, founded_year: {$lte: 2010}}
+projection: {name: 1, "ipo.valuation_amount": 1}
 sort:
 skip: 
 limit:
